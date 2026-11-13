@@ -1,15 +1,11 @@
 # Feed Jonathan
 
-A tiny endless runner in the style of the Chrome T-Rex game. Jonathan runs on his own. Run into safe food to eat it. Eat something he's allergic to and it's game over.
+A tiny endless runner in the style of the Chrome T-Rex game.
+Jonathan runs on his own. Run into safe food to eat it. Eat something he's allergic to and it's game over.
 
-Jonathan is allergic to **eggs, all seafood, peanuts, and dairy**, but the game never tells you. Work it out (or learn the hard way). Safe foods are fruit and veg. Food also floats at head height: run under allergens, or jump up to grab safe snacks.
+Jonathan is allergic to **eggs, all seafood, peanuts, and dairy**, but the game never tells you. Work it out (or learn the hard way). 
 
-## Play
+# Play it here
+### http://licensetopurr.github.io/feed-jonathan
+<img width="1002" height="562" alt="Screenshot 2026-11-12 at 10 34 00 PM" src="https://github.com/user-attachments/assets/071dd0cc-3948-453c-9764-24fac32737f4" />
 
-```bash
-npx serve .
-```
-
-Then open the URL it prints. Controls: Space / ↑ / tap to jump.
-
-No build step: `index.html`, `style.css`, `game.js`.
