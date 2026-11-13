@@ -1,0 +1,68 @@
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { margin: 0; height: 100%; overflow: hidden; overscroll-behavior: none; }
+body {
+  background: #f7f7f7;
+  color: #535353;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  touch-action: none; /* no double-tap zoom, pull-to-refresh or scrolling while playing */
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+main { width: min(100%, 820px); padding: 16px; text-align: center; }
+h1 { margin: 0 0 4px; font-size: 1.6rem; letter-spacing: 0.05em; }
+.sub, .help { margin: 4px 0 12px; font-size: 0.85rem; }
+.help { margin-top: 12px; opacity: 0.7; }
+.touch-only { display: none; }
+canvas {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 8 / 3;
+  background: #fff;
+  border: 2px solid #535353;
+  border-radius: 6px;
+  display: block;
+  touch-action: none;
+}
+
+/* Touch devices: show tap instructions instead of keyboard ones */
+@media (pointer: coarse) {
+  .desktop-only { display: none; }
+  .touch-only { display: block; }
+}
+
+/* Phones: use the whole screen for the game */
+@media (max-width: 599px) {
+  main { padding: 10px; }
+  h1 { font-size: 1.25rem; }
+  .sub { font-size: 0.75rem; margin-bottom: 10px; }
+}
+
+/* Phone held upright: rotate the game 90° so the wide field fills the screen.
+   Turn the phone sideways and it sits upright. (Class set from game.js.) */
+html.rotated main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100dvh;
+  height: 100dvw;
+  max-width: none;
+  transform-origin: top left;
+  transform: translateX(100dvw) rotate(90deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px;
+}
+html.rotated h1, html.rotated .sub { display: none; }
+html.rotated .help { margin: 8px 0 0; font-size: 0.75rem; }
+
+/* Landscape phones: drop the text, let the canvas take the screen */
+@media (max-height: 500px) {
+  h1, .sub, .help { display: none; }
+  main { padding: 8px; }
+}
