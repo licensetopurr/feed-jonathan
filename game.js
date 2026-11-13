@@ -438,7 +438,7 @@
     } else if (state === "dead") {
       centerText([
         ["G A M E   O V E R", 26, -34],
-        [`Jonathan ate ${deathItem.emoji} ${deathItem.name}. Allergic to ${deathItem.label}!`, 15, -4],
+        [`You ate ${deathItem.emoji} ${deathItem.name}!`, 18, -4],
         [`${eaten} foods eaten · score ${score}`, 14, 20],
         [(touch ? "Tap" : "Press SPACE or tap") + " to retry", 14, 48],
       ]);
