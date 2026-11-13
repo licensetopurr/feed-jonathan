@@ -1,4 +1,4 @@
-# Feed Jonathan
+# Feed Jonathan (my boyfriend, lol)
 
 A tiny endless runner in the style of the Chrome T-Rex game.
 Jonathan runs on his own. Run into safe food to eat it. Eat something he's allergic to and it's game over.
